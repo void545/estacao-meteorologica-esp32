@@ -1,4 +1,4 @@
-# 🌦️ Nexora · Estação Meteorológica (Alagoinhas-BA)
+#  Nexora · Estação Meteorológica (Alagoinhas-BA)
 
 Módulo 1 do **Nexora**, um projeto de automação residencial, empresarial e de processos de baixo custo com ESP32 e Arduino.
 
@@ -11,7 +11,7 @@ A estação junta **dados reais da internet** sobre Alagoinhas-BA com **mediçõ
 
 ---
 
-## ✨ Funcionalidades
+##  Funcionalidades
 
 - **Condições atuais:** temperatura, sensação térmica, umidade, vento com direção, rajadas, pressão e nebulosidade.
 - **Previsão:** gráfico das próximas 12 horas (temperatura + chance de chuva) e tabela dos próximos 5 dias.
@@ -23,7 +23,7 @@ A estação junta **dados reais da internet** sobre Alagoinhas-BA com **mediçõ
 - **Navegação:** as páginas trocam sozinhas a cada 10 s. Os botões avançam e voltam, e a troca automática pausa por 30 s depois de usar um botão.
 - **LED de estado:** 🟢 tudo ok · 🟡 atenção · 🔴 alerta (piscando) · 🔵 sem Wi-Fi.
 
-## 🧠 Arquitetura
+##  Arquitetura
 
 ![Diagrama de blocos](docs/img/blocos.png)
 
@@ -39,7 +39,7 @@ A estação junta **dados reais da internet** sobre Alagoinhas-BA com **mediçõ
 - Qualidade do ar: `air-quality-api.open-meteo.com/v1/air-quality` (a cada 30 min)
 - Hora certa: NTP (`pool.ntp.org`), fuso UTC−3
 
-## 🔌 Ligações
+##  Ligações
 
 ![Esquema de ligações](docs/img/ligacoes.png)
 
@@ -102,7 +102,7 @@ const float ALTITUDE_M = 158.0;             // usada para corrigir a pressão
 
 Para usar em outra cidade, troque latitude, longitude, altitude e `CITY_NAME`.
 
-## 🖥️ As telas
+##  As telas
 
 | Página | Conteúdo |
 |---|---|
@@ -122,7 +122,7 @@ Para usar em outra cidade, troque latitude, longitude, altitude e `CITY_NAME`.
 
 > As imagens acima foram geradas pelo próprio código de desenho, com dados de exemplo no formato da Open-Meteo. No Wokwi aparecem os dados reais do momento.
 
-## 🚨 Regras de alerta
+##  Regras de alerta
 
 | Situação | Atenção 🟡 | Alerta 🔴 |
 |---|---|---|
@@ -167,7 +167,7 @@ Preços aproximados em R$. Só o ESP32 foi conferido numa loja (out/2026); os de
 
 O PDF [`Nexora_Estacao_Meteorologica.pdf`](Nexora_Estacao_Meteorologica.pdf) (28 páginas) explica tudo do zero: analogias, Wi-Fi, API, HTTPS, JSON, NTP, meteorologia, SPI × I2C, cores RGB565, pull-up, Lei de Ohm no LED, `millis()`, e os cálculos passo a passo (orvalho, pressão, gráfico, arco do sol).
 
-## 🗺️ Próximos passos
+##  Próximos passos
 
 - [ ] Montagem física
 - [ ] Histórico de pressão das últimas 24 h (tendência de chuva)
