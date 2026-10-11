@@ -1,0 +1,10 @@
+# Wokwi Library List
+# Bibliotecas usadas pela Estacao Meteorologica Nexora
+Adafruit GFX Library
+Adafruit ILI9341
+Adafruit BusIO
+U8g2
+DHT sensor library
+Adafruit Unified Sensor
+Adafruit BMP085 Library
+ArduinoJson

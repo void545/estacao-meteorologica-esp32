@@ -1,0 +1,308 @@
+{
+  "version": 1,
+  "author": "Nexora - Estacao Meteorologica Alagoinhas",
+  "editor": "wokwi",
+  "parts": [
+    {
+      "type": "board-esp32-devkit-c-v4",
+      "id": "esp",
+      "top": 0,
+      "left": 0,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-ili9341",
+      "id": "tft",
+      "top": -200,
+      "left": 250,
+      "attrs": {}
+    },
+    {
+      "type": "board-grove-oled-sh1107",
+      "id": "oled",
+      "top": -180,
+      "left": -260,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-dht22",
+      "id": "dht",
+      "top": 140,
+      "left": -250,
+      "attrs": {
+        "temperature": "29.5",
+        "humidity": "72"
+      }
+    },
+    {
+      "type": "board-bmp180",
+      "id": "bmp",
+      "top": 30,
+      "left": -250,
+      "attrs": {
+        "temperature": "29",
+        "pressure": "99350"
+      }
+    },
+    {
+      "type": "wokwi-pushbutton",
+      "id": "btnNext",
+      "top": 290,
+      "left": 160,
+      "attrs": {
+        "color": "green",
+        "label": "PROXIMA"
+      }
+    },
+    {
+      "type": "wokwi-pushbutton",
+      "id": "btnPrev",
+      "top": 290,
+      "left": 40,
+      "attrs": {
+        "color": "blue",
+        "label": "ANTERIOR"
+      }
+    },
+    {
+      "type": "wokwi-rgb-led",
+      "id": "rgb",
+      "top": 250,
+      "left": -110,
+      "attrs": {
+        "common": "cathode"
+      }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "rR",
+      "top": 340,
+      "left": -160,
+      "rotate": 90,
+      "attrs": {
+        "value": "220"
+      }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "rG",
+      "top": 340,
+      "left": -120,
+      "rotate": 90,
+      "attrs": {
+        "value": "220"
+      }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "rB",
+      "top": 340,
+      "left": -80,
+      "rotate": 90,
+      "attrs": {
+        "value": "220"
+      }
+    }
+  ],
+  "connections": [
+    [
+      "esp:TX",
+      "$serialMonitor:RX",
+      "",
+      []
+    ],
+    [
+      "esp:RX",
+      "$serialMonitor:TX",
+      "",
+      []
+    ],
+    [
+      "tft:VCC",
+      "esp:3V3",
+      "red",
+      []
+    ],
+    [
+      "tft:GND",
+      "esp:GND.2",
+      "black",
+      []
+    ],
+    [
+      "tft:CS",
+      "esp:15",
+      "orange",
+      []
+    ],
+    [
+      "tft:RST",
+      "esp:4",
+      "gray",
+      []
+    ],
+    [
+      "tft:D/C",
+      "esp:2",
+      "purple",
+      []
+    ],
+    [
+      "tft:MOSI",
+      "esp:23",
+      "green",
+      []
+    ],
+    [
+      "tft:SCK",
+      "esp:18",
+      "yellow",
+      []
+    ],
+    [
+      "tft:LED",
+      "esp:3V3",
+      "red",
+      []
+    ],
+    [
+      "tft:MISO",
+      "esp:19",
+      "blue",
+      []
+    ],
+    [
+      "oled:VCC",
+      "esp:3V3",
+      "red",
+      []
+    ],
+    [
+      "oled:GND.1",
+      "esp:GND.1",
+      "black",
+      []
+    ],
+    [
+      "oled:SDA",
+      "esp:21",
+      "blue",
+      []
+    ],
+    [
+      "oled:SCL.1",
+      "esp:22",
+      "yellow",
+      []
+    ],
+    [
+      "bmp:VCC",
+      "esp:3V3",
+      "red",
+      []
+    ],
+    [
+      "bmp:GND",
+      "esp:GND.1",
+      "black",
+      []
+    ],
+    [
+      "bmp:SDA",
+      "esp:21",
+      "blue",
+      []
+    ],
+    [
+      "bmp:SCL",
+      "esp:22",
+      "yellow",
+      []
+    ],
+    [
+      "dht:VCC",
+      "esp:3V3",
+      "red",
+      []
+    ],
+    [
+      "dht:GND",
+      "esp:GND.1",
+      "black",
+      []
+    ],
+    [
+      "dht:SDA",
+      "esp:13",
+      "green",
+      []
+    ],
+    [
+      "btnNext:1.l",
+      "esp:32",
+      "green",
+      []
+    ],
+    [
+      "btnNext:2.l",
+      "esp:GND.3",
+      "black",
+      []
+    ],
+    [
+      "btnPrev:1.l",
+      "esp:33",
+      "blue",
+      []
+    ],
+    [
+      "btnPrev:2.l",
+      "esp:GND.3",
+      "black",
+      []
+    ],
+    [
+      "esp:25",
+      "rR:1",
+      "red",
+      []
+    ],
+    [
+      "rR:2",
+      "rgb:R",
+      "red",
+      []
+    ],
+    [
+      "esp:26",
+      "rG:1",
+      "green",
+      []
+    ],
+    [
+      "rG:2",
+      "rgb:G",
+      "green",
+      []
+    ],
+    [
+      "esp:27",
+      "rB:1",
+      "blue",
+      []
+    ],
+    [
+      "rB:2",
+      "rgb:B",
+      "blue",
+      []
+    ],
+    [
+      "rgb:COM",
+      "esp:GND.1",
+      "black",
+      []
+    ]
+  ],
+  "dependencies": {}
+}
